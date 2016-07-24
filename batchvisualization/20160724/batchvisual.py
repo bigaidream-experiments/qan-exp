@@ -42,8 +42,9 @@ percent = y /  y.sum(axis=0).astype(float) * 100
 fig = plt.figure()
 ax = fig.add_subplot(111)
 ax.stackplot(x, percent)
-ax.set_title('100 % stacked area chart')
+ax.set_title('Minibatch Selection Visualization')
 ax.set_ylabel('Percent (%)')
+ax.set_xlabel('Iteration')
 ax.margins(0, 0) # Set margins to avoid "whitespace"
 
 #plt.show()
