@@ -2,6 +2,7 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import sys
+import numpy as np
 
 fin = open('batchselection.log') 
 
@@ -20,16 +21,31 @@ for l in fin:
 
 t = range(len(a[1]))
 
-plt.title('batch visualization')
-plt.ylabel('number')
-plt.xlabel('Iteration')
+
+#plt.title('batch visualization')
+#plt.ylabel('number')
+#plt.xlabel('Iteration')
 label = {}
 for i in range(1,11):
 	label[i] = str(i)
 for i in range(1,11):
 	#print (a[i])	
-	plt.plot(t, a[i], label=label[i])
+	#plt.plot(t, a[i], label=label[i])
+	pass
 
-plt.legend(loc = 'lower right')
+totaly = []
+for i in range(1,11):
+	totaly.append(a[i])
+y = np.row_stack(totaly)
+x = np.arange(len(a[1]))
+percent = y /  y.sum(axis=0).astype(float) * 100 
+fig = plt.figure()
+ax = fig.add_subplot(111)
+ax.stackplot(x, percent)
+ax.set_title('100 % stacked area chart')
+ax.set_ylabel('Percent (%)')
+ax.margins(0, 0) # Set margins to avoid "whitespace"
 
+#plt.show()
+#plt.legend(loc = 'lower right')
 plt.savefig('batchvisual.pdf')
