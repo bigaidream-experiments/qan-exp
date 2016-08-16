@@ -19,9 +19,9 @@ for i in fin2:
 ar3 = []
 for i in fin3:
 	ar3.append(i[:-1])
-ar1 = np.array(ar1[0:200])
-ar2 = np.array(ar2[0:200])
-ar3 = np.array(ar3[0:200])
+ar1 = np.array(ar1[0:100])
+ar2 = np.array(ar2[0:100])
+ar3 = np.array(ar3[0:100])
 ##baseline VS last episode
 
 t = np.array(range(0, len(ar1)))
