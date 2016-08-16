@@ -31,31 +31,25 @@ plt.figure(1)
 # linear
 plt.subplot(221)
 plt.plot(t, ar1)
-plt.yscale('linear')
-plt.title('linear')
+#plt.yscale('linear')
+plt.title('10000')
 plt.grid(True)
 
 # log
 plt.subplot(222)
 plt.plot(t, ar2)
-plt.yscale('log')
-plt.title('log')
+#plt.yscale('log')
+plt.title('1000')
 plt.grid(True)
 
 
 # symmetric log
 plt.subplot(223)
 plt.plot(t, ar3)
-plt.yscale('symlog', linthreshy=0.05)
-plt.title('symlog')
+#plt.yscale('symlog', linthreshy=0.05)
+plt.title('100')
 plt.grid(True)
 
-# logit
-plt.subplot(224)
-plt.plot(t, ar3)
-plt.yscale('logit')
-plt.title('logit')
-plt.grid(True)
 
 plt.savefig('acc.jpg')
 
