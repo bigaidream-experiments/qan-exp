@@ -2,6 +2,7 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import sys
+import numpy as np
 
 fin1 = open('10000.log')
 fin2 = open('1000.log')
@@ -18,21 +19,44 @@ for i in fin2:
 ar3 = []
 for i in fin3:
 	ar3.append(i[:-1])
-ar1 = ar1[0:200]
-ar2 = ar2[0:200]
-ar3 = ar3[0:200]
+ar1 = np.array(ar1[0:200])
+ar2 = np.array(ar2[0:200])
+ar3 = np.array(ar3[0:200])
 ##baseline VS last episode
 
-t = range(0, len(ar1))
+t = np.array(range(0, len(ar1)))
 
-plt.title('')
-plt.ylabel('Accuracy(%)')
-plt.xlabel('Epoch')
-plt.plot(t, ar1, label='10000')
-plt.plot(t, ar2, label='1000')
-plt.plot(t, ar3, label='100')
-plt.legend(loc='lower right')
+plt.figure(1)
 
-plt.savefig('acc.pdf')
+# linear
+plt.subplot(221)
+plt.plot(t, ar1)
+plt.yscale('linear')
+plt.title('linear')
+plt.grid(True)
+
+# log
+plt.subplot(222)
+plt.plot(t, ar2)
+plt.yscale('log')
+plt.title('log')
+plt.grid(True)
+
+
+# symmetric log
+plt.subplot(223)
+plt.plot(t, ar3)
+plt.yscale('symlog', linthreshy=0.05)
+plt.title('symlog')
+plt.grid(True)
+
+# logit
+plt.subplot(224)
+plt.plot(t, ar3)
+plt.yscale('logit')
+plt.title('logit')
+plt.grid(True)
+
+plt.savefig('acc.jpg')
 
 
