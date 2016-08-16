@@ -48,6 +48,6 @@ plt.title('100')
 #plt.grid(True)
 
 
-plt.savefig('acc.jpg')
+plt.savefig('acc.pdf')
 
 
