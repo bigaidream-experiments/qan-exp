@@ -12,7 +12,8 @@ train = []
 index = 1
 tmp = []
 for i in fin1:
-	if i == 'episode':
+	acc = i[:-1]
+	if acc == 'episode_end':
 		tmp = [float(x) for x in tmp]
 		if index % 2 == 1: #train
 			train.append(tmp)
@@ -21,7 +22,7 @@ for i in fin1:
 		index += 1
 		tmp = []
 		continue
-	tmp.append(i[:-1])
+	tmp.append(acc)
 
 ##baseline VS last episode
 
