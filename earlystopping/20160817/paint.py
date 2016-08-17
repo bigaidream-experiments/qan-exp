@@ -30,8 +30,8 @@ plt.title('haha')
 plt.xlabel('epoch')
 plt.ylabel('acc')
 for idx in range(len(test)):
-	t = range(0, len(test[idx]))
-	y = test[idx]
+	t = range(0, len(test[idx]))[:-1]
+	y = test[idx][:-1]
 	print(y)
 	plt.plot(t, y, label=str(idx))
 	plt.legend(loc='lower right')
