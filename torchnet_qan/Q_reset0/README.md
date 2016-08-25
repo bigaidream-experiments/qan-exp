@@ -4,12 +4,16 @@
 3. What is the expected result?
 4. Actual result
 5. Next plan
+
 ---
+
 1. Check Q value.
 2. 验证Q值的变化，验证是不是需要meta-momentum DQN才能学到东西。
 3. Q is increasing, and CNN test acc is increasing too.
 4. Q is increasing, and CNN test acc is increasing too.
 5. 修复运行到一半卡住的bug，跑更多个episode，看是否准确率会持续提高，速度会持续加快.
+
+---
 
 * max_epoch=5(each episode has 5 epoch)
 * max_reward=100, min_reward=-1
