@@ -1,12 +1,15 @@
-## Ques
+## QAs
+
+### Questions
 1. Why do this exp?
-2. What I want to verify?
+2. What do I want to verify?
 3. What is the expected result?
 4. Actual result
 5. Next plan
 
 ---
 
+### Answers
 1. Check Q value.
 2. 验证Q值是否随着episode的增加而增加，验证DQN在不加meta-momentum的情况下是否能学习。
 3. Q is increasing, and CNN test acc is increasing too.
@@ -21,5 +24,5 @@
 * one line in Q.log = average maximum action-value in one episode.
 * learn_start=1000 (start to learn after 1000 steps)
 * max_lr=1, min_lr=0.01, lr_delta=0.01
-* add_momentum=0 (mean not use meta-momentum)
+* add_momentum=0 (means meta-momentum is not used)
 * early_stop=false
