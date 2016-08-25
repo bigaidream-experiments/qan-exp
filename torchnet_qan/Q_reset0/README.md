@@ -8,9 +8,9 @@
 ---
 
 1. Check Q value.
-2. 验证Q值的变化，验证是不是需要meta-momentum DQN才能学到东西。
+2. 验证Q值的变化，验证是不是需要meta-momentum DQN才能学到东西.
 3. Q is increasing, and CNN test acc is increasing too.
-4. Q is increasing, and CNN test acc is increasing too.
+4. Q值持续增加，CNN测试准确率有提升，但是也有抖动，大致来看是逐渐提升的，还需要观察更多的episode.
 5. 修复运行到一半卡住的bug，跑更多个episode，看是否准确率会持续提高，速度会持续加快.
 
 ---
