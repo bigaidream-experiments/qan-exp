@@ -1,5 +1,5 @@
-## settings
-1. Why doing this exp?
+## Ques
+1. Why do this exp?
 2. What I want to verify?
 3. What is the expected result?
 4. Actual result
@@ -15,6 +15,7 @@
 
 ---
 
+## Settings
 * max_epoch=5(each episode has 5 epoch)
 * max_reward=100, min_reward=-1
 * one line in Q.log = average maximum action-value in one episode.
