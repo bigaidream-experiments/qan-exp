@@ -1,6 +1,6 @@
 ## Result
 
-![alt text](acc.pdf)
+![alt text][acc.png]
 
 
 ## QAs
