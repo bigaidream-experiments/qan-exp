@@ -1,6 +1,6 @@
 ## Result
 
-![alt text][acc.png]
+![alt image](https://github.com/bigaidream-experiments/qan-exp/blob/master/torchnet_qan/fix_seed/exp8/acc.png?raw=true)
 
 
 ## QAs
