@@ -53,6 +53,6 @@ plt.title('Q value')
 #plt.legend(loc='lower right')
 
 plt.show()
-plt.savefig('acc.pdf')
+plt.savefig('acc.png')
 
 
